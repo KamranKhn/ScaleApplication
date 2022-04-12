@@ -32,7 +32,7 @@ export const CircularScale = () => {
           minimumValue={0}
           value={progress}
           maximumValue={100}
-          onValueChange={setProgress}
+          onValueChange={setProgress} //We are setting the progress of circular scale
           thumbTintColor="#40ecff"
           minimumTrackTintColor="#40ecff"
           maximumTrackTintColor="#f5f5f5"

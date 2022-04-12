@@ -3,19 +3,25 @@ import {StyleSheet, View, Text, Pressable} from 'react-native';
 
 const BASE_SIZE = 270;
 
+/**
+ * statConfig, Mapped the selected value, wrt label.
+ */
 const statConfig = {
   1: 'Low',
   2: 'Low',
-  3: 'Mediun',
-  4: 'Mediun',
+  3: 'Medium',
+  4: 'Medium',
   5: 'High',
 };
 
 export const PyramidScale = () => {
-  var list = Array(5).fill({status: false});
+  var list = Array(5).fill({status: false}); //Initialised the list by five elements, have status false by default
   const [statList, setStatList] = useState(list);
   const [statText, setStatText] = useState('');
 
+  /**
+   * Function: 1. Change the selected status on next cta press
+   */
   const handleClick = index => {
     let newArray = [...statList];
     for (let i = 0; i < newArray.length; i++) {
